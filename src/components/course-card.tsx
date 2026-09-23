@@ -46,14 +46,14 @@ export function CourseCard({
         {isEnrolled ? (
           <Badge
             variant="outline"
-            className="border-amber-300 bg-amber-100/80 text-amber-700 dark:border-purple-800 dark:bg-purple-950/80 dark:text-purple-300"
+            className="border-purple-800 bg-purple-950/80 text-purple-300"
           >
             ลงทะเบียนแล้ว
           </Badge>
         ) : (
           <Badge
             variant="outline"
-            className="border-purple-300 bg-purple-100/80 text-purple-700 dark:border-amber-800 dark:bg-amber-950/80 dark:text-amber-300"
+            className="border-amber-800 bg-amber-950/80 text-amber-400"
           >
             เปิดรับ
           </Badge>
@@ -69,7 +69,7 @@ export function CourseCard({
 
       {isEnrolled && student && (
         <CardContent className="flex items-end justify-between">
-          <div className="text-xs text-muted-foreground">
+          <div className="text-xs text-muted-foreground space-y-0.5">
             <p>
               ชื่อ นศ.: {student.firstName} {student.lastName}
             </p>
@@ -81,7 +81,7 @@ export function CourseCard({
             variant="ghost"
             size="icon"
             onClick={onUnenroll}
-            className="h-8 w-8 text-red-500 hover:bg-red-50 hover:text-red-600 dark:hover:bg-red-950/50"
+            className="h-8 w-8 text-red-500 hover:bg-transparent hover:text-red-600"
           >
             <Trash2 className="h-4 w-4" />
           </Button>
